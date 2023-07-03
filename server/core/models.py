@@ -9,7 +9,7 @@ class Domain(models.Model):
     description = models.TextField()
     created_at = models.DateTimeField(null=True)
     last_updated_at = models.DateTimeField(null=True)
-    total_urls = models.IntegerField()
+    total_urls = models.IntegerField(null=True)
 
     def save(self, *args, **kwargs):
         super(Domain, self).save(*args, **kwargs)
